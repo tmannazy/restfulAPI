@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-t6y@2b$l6!wwz=ou3)ox@v7$$%an4u&8fpo6uzhp3xy_na6n-_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['172.16.1.68', 'localhost']
 
 
 # Application definition
@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'toys.apps.ToysConfig'
+    'drones.apps.DronesConfig'
+    # 'toys.apps.ToysConfig',
 ]
 
 MIDDLEWARE = [
@@ -77,8 +78,14 @@ WSGI_APPLICATION = 'restfulAPI.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'drones',
+        'USER': 'tmannazy_tchinny',
+        'PASSWORD': 'password',
+        'HOST': '127.0.0.1',
+        'PORT': '5432'
     }
 }
 
