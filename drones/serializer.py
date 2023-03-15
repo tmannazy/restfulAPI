@@ -16,7 +16,7 @@ class DroneSerializer(serializers.HyperlinkedModelSerializer):
 
 	class Meta:
 		model = Drone
-		fields = ('url', 'name', 'drone_category', 'manufacturing_date', 'has_it_completed', 'inserted_timestamp')
+		fields = ('url', 'name', 'drone_category', 'manufacturing_date', 'has_it_competed', 'inserted_timestamp')
 
 
 class CompetitionSerializer(serializers.HyperlinkedModelSerializer):
