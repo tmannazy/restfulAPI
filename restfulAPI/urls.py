@@ -19,5 +19,11 @@ from django.urls import path, include, re_path
 urlpatterns = [
 	# path('admin/', admin.site.urls),
 	# re_path(r'^', include('toys.urls')),
-	re_path(r'^', include('drones.urls'))
+	re_path(r'^', include('drones.urls')),
+	re_path(r'^api-auth/', include('rest_framework.urls')),
+	# re_path(r'^v1/', include(('drones.urls', 'v1'), namespace='v1')),
+	# re_path(r'^v1/api-auth/', include('rest_framework.urls', namespace='rest_framework.v1')),
+	# re_path(r'^v2/', include(('drones.v2.urls', 'v2'), namespace='v2')),
+	# re_path(r'^v2/api-auth/', include('rest_framework.urls', namespace='rest_framework.v2'))
+
 ]
